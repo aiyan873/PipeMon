@@ -8,7 +8,7 @@ uploaded = files.upload()  # <-- Drag & drop your .tflite here
 
 # Get the filename from uploaded dict
 tflite_path = list(uploaded.keys())[0]
-print(f"✅ Uploaded file: {tflite_path}")
+print(f"  Uploaded file: {tflite_path}")
 
 # Step 2: Define conversion function
 def tflite_to_header(
@@ -47,7 +47,7 @@ const int {var_name}_len = {len(data)};
     with open(header_path, "w") as f:
         f.write(header_content)
 
-    print(f"✅ Header file written: {header_path}")
+    print(f"   Header file written: {header_path}")
     print(f"   Array name : {var_name}")
     print(f"   Length     : {len(data)} bytes")
     print(f"   PROGMEM    : {'enabled' if progmem else 'disabled'}")
